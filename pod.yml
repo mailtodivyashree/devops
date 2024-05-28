@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+  labels:
+    app: my-app
+spec:
+  containers:
+  - name: my-container
+    image: nginx:latest  # Use your desired Docker image
+    ports:
+    - containerPort: 80  # Port to expose on the container
+#############
+kubectl apply -f my-pod.yaml
